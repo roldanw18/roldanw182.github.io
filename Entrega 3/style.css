@@ -1,0 +1,85 @@
+* {
+    font-family: 'Fraunces', serif;
+    color: #141414;
+}
+
+.calculadora{
+    padding:10px;
+    background-color:#2d2e30;
+	border-radius: 5px;
+
+  }
+  .calculadora td button{
+
+    width:50px;
+    height: 50px;
+    font-size: 25px;
+  }
+  #creditos{
+    display:block;
+    padding-top:10px;
+    color:#d8d6d6;
+    text-align: center;
+    width:300px;
+  }
+  #resultado{
+    display:block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    width:250px;
+    height: 100px;
+    line-height: 100px;
+    background-color:#d8d6d6;
+    border-radius: 5px;
+    overflow-y: scroll;
+  }
+
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			z-index: 1;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+
+
+		.expandir {
+			width: 300px;
+		}
+		.galeria {
+			 display:flex;
+			 flex-wrap: wrap;
+		}
+
+		.galeria img{
+			margin-top: 5px;
+		}
+
+		.clock {
+			font-size: 3rem;
+			font-weight: bold;
+		  }
+		  
+		  .hours, .minutes, .seconds {
+			padding: 0.5rem;
+			background-color: #333;
+			color: #fff;
+			border-radius: 0.5rem;
+		  }
+
+		 
+
+		  #mapa {
+			height: 500px;
+			width: 100%;
+		  }

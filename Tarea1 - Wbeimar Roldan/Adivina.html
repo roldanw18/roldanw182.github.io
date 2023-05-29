@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<title>JUEGO ADIVINA EL NUMERO</title>
+<meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let min=parseInt(prompt("Ingrese el numero minimo"));
+        let max=parseInt(prompt("Ingrese el numero maximo"));
+
+        function ALEATORIO(max,min){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        let a=ALEATORIO(max,min);
+       // alert(a); MUESTRA EL NUMERO RANDOM
+        
+        let intentos1=parseInt(prompt("Si desea intentos ILIMITADOS, Ingrese 1. Si desea solamente 3 INTENTOS Ingrese 2"));
+        
+        if(intentos1==1){
+        let Entrada=parseInt(prompt("Este es tu PRIMER Intento"));
+                        let contador2=1;
+                          while(Entrada!=a){
+                              if(Entrada<a){
+                              contador2++;
+                              Entrada=parseInt(prompt("El numero es MAYOR, llevas: "+ contador2 + " Intentos")); 
+                             } else {
+                               contador2++;
+                               Entrada=parseInt(prompt("El numero es MENOR, llevas: "+ contador2 + " Intentos"));
+                               }
+                           }
+                         if(Entrada==a){
+                         alert("ENCONTRADO EN " + contador2 + " Intentos");
+                          }
+                        } 
+//-------------------------------------------------------
+        if(intentos1==2){
+                      let contador=1;
+                        let Entrada=parseInt(prompt("ESTE ES TU INTENTO: "+ contador + " de 3"));   
+                         while(Entrada!=a && contador!=3){
+                             if(Entrada<a){
+                               contador++;
+                               Entrada=parseInt(prompt("El numero es MAYOR, ESTE ES TU INTENTO: "+ contador + "de 3"));
+                            } else if(Entrada>a){
+                            contador++;
+                            Entrada=parseInt(prompt("El numero es MENOR, ESTE ES TU INTENTO: "+ contador + " de 3"));
+                                  }
+                            } 
+                            if(Entrada==a){
+                              alert("ENCONTRADO EN " + contador + " Intentos");
+                            }
+
+                            if(contador==3){
+                                 alert("Intentalo otra vez");
+                            } 
+                        }
+    </script>
+    <h1>
+        Adivinaste el Numero
+    </h1>
+    <p>Para jugar denuevo, utiliza f5</p>
+</body>
+</html>

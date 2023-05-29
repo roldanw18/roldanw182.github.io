@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego</title>
+    
+</head>
+<body>
+    <script>
+        let min = 1;
+        let max = 3;
+        function numeroA(min, max){
+           return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        let Aleatorio=numeroA(min,max);
+        let seleccion=0;
+        seleccion= prompt("1. Piedra, 2. Papel, 3. Tijera");
+        if(Aleatorio==1){
+            alert("La pc eligio: PIEDRA");
+        } else if(Aleatorio==2){
+            alert("La pc eligio PAPEL");
+        } else if(Aleatorio==3){
+            alert("La pc eligio TIJERA");
+        }
+        
+
+        if(seleccion == Aleatorio){
+            alert("EMPATE");
+        }
+
+        if(seleccion==1 && Aleatorio==2){
+                 alert("PERDISTE");}
+                        else if(seleccion==1 && Aleatorio==3){
+                     alert("GANASTE");
+        }
+        
+    if(seleccion==2 && Aleatorio==1){
+            alert("GANASTE"); }
+                   else if(seleccion==2 && Aleatorio==3)
+                   alert("PERDISTE");
+
+        if(seleccion==3 && Aleatorio==1){
+            alert("PERDISTE");}
+                  else if(seleccion==3 && Aleatorio==2){
+                  alert("GANASTE");
+        }
+
+
+   </script>
+    <h1>JUEGO PIEDRA PAPEL O TIJERA</h1>
+    <p>F5 PA COMENZAR</p>
+</body>
+</html>
